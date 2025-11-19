@@ -1,0 +1,161 @@
+@font-face {
+    font-family: ElmsSans;
+    src: url(font/ElmsSans-SemiBold.ttf);
+}
+
+body {
+    font-family: ElmsSans;
+}
+
+header {
+    display: flex;
+    gap: 57%;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: white;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    gap: 10%;
+    margin-left: 2%;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    gap: 10%;
+}
+
+#hero {
+    border: 1px solid white;
+    height: 50vh;
+    text-align: center;
+    background-image: url(images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 10vh;
+    margin-bottom: 20vh;
+}
+
+#hero div {
+    font-size: 4vh;
+    margin-top: 10%;
+}
+
+#hero div h1 {
+    color: white;
+}
+
+#hero div button {
+    border: none;
+    background-color: yellow;
+    border-radius: 50px;
+    padding: 15px;
+}
+
+#hero div button a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    margin: auto;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    height: 60vh;
+    width: 60vw;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+main :nth-child(4) {
+    grid-column: span 2;
+}
+
+.image {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    display: flex;
+    background-color: black;
+    color: white;
+    gap: 60%;
+}
+
+footer #about {
+    width: 40%;
+    margin-left: 2%;
+}
+
+footer #provincias {
+    display: flex;
+    gap: 15%;
+    width: 50%;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+    header {
+        background-color: black;
+        color: white;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        gap: 50%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10%;
+    }
+
+    #hero {
+        margin-top: 30vh;
+    }
+
+    #hero div {
+        font-size: 4vh;
+        margin-top: 25%;
+    }
+
+    main {
+        width: 90vw;
+    }
+
+    footer {
+        gap: 12%;
+    }
+
+    footer #provincias {
+        display: flex;
+        width: 100%;
+    }
+}
